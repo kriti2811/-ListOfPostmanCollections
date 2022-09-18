@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "7b82f7d1-c9dc-47b2-bda6-a4e18219e3d2",
+		"name": "Module 15 -Data-Driven-Test-Postman using CSV file",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User using csv file",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// name ",
+							"",
+							"pm.environment.set(\"name\", \"Kriti\");",
+							"",
+							"// Job",
+							"pm.environment.set(\"job\", \"software-engineer\");"
+						],
+						"type": "text/javascript",
+						"id": "f9bd132c-7fa6-409e-90ce-1dc94739d908"
+					}
+				}
+			],
+			"_postman_id": "1efa4056-8fb8-45d5-be23-33c6e7b7cc51",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{name}}\",\n    \"job\": \"{{job}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "98df71c4-74cf-4b02-9c87-4536a4006d61",
+		"name": "Module 15 -Data-Driven-Test-Postman Using JSON File",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User using json file",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// name ",
+							"",
+							"pm.environment.set(\"name\", \"Kriti\");",
+							"",
+							"// Job",
+							"pm.environment.set(\"job\", \"software-engineer\");"
+						],
+						"type": "text/javascript",
+						"id": "dc398afd-150f-44bd-af7b-80f99d2f245c"
+					}
+				}
+			],
+			"_postman_id": "c3f078b9-4202-4441-bef8-81c4af02e171",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{name}}\",\n    \"job\": \"{{job}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users"
+			},
+			"response": []
+		}
+	]
+}
